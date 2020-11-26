@@ -1,0 +1,33 @@
+body {
+    font: 14px sans-serif;
+    background-image: url("../images/img.png") ;     
+    background-size: cover;
+}
+
+form {
+    margin: 0 auto;
+    width: 250px;
+}
+
+.form-group {
+    color: rgb(5, 49, 5);
+    font-weight: bold;
+    font-size: large;
+}
+
+.btn-primary {
+    color: white;
+    background-color: rgb(1, 61, 1);
+}
+
+.enlace {
+    color: rgb(3, 71, 3);
+    font-weight: bold;
+}
+h2{
+    text-align: center;
+    padding: 5px;
+}
+p{
+    text-align: center;
+}

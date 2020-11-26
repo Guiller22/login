@@ -15,9 +15,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <meta charset="UTF-8">
     <title>Welcome</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; text-align: center; }
-    </style>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <div class="page-header">
@@ -27,8 +25,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <p>
         <a href="reset-password.php" class="btn btn-warning">Cambia tu contraseña</a>
         <a href="logout.php" class="btn btn-danger">Cierra la sesión</a>
-        <br><br><h2>Clic en el logo para más tips <a href="https://www.configuroweb.com/desarrollo/"><img src="images/configuroweb.png" width="170"></a>
-        <br><br><iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLEp4kajrb4a0fgy8e5JO3iGO7iKnPwQFQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <a href="verTabla.php">Ver Tabla</a>
     </p>
 
 

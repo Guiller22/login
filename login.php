@@ -2,16 +2,12 @@
 // Initialize the session
 session_start();
  
-// Check if the user is already logged in, if yes then redirect him to welcome page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
   header("location: welcome.php");
   exit;
 }
- 
-// Include config file
+
 require_once "config.php";
- 
-// Define variables and initialize with empty values
 $username = $password = "";
 $username_err = $password_err = "";
  
@@ -94,15 +90,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
-    </style>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <div class="wrapper">
-        <h2>Login ConfiguroWeb</h2>
-        <p>Por favor, complete sus credenciales para iniciar sesión.</p>
+        <h2>Login</h2>
+        <p>Inicie sesión</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Usuario</label>
@@ -117,7 +110,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Ingresar">
             </div>
-            <p>¿No tienes una cuenta? <a href="register.php">Regístrate ahora</a>.</p>
+            <p>Si aún no tienes cuenta<a href="register.php">Regístrate ahora</a>.</p>
         </form>
     </div>    
 </body>
