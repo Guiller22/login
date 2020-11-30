@@ -32,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_bind_param($stmt, "s", $param_username);
             
             $param_username = $usuario;
-            
+            $qry = mysql_fetch_array($sql);
             if(mysqli_stmt_execute($stmt)){
                 mysqli_stmt_store_result($stmt);
                 if(mysqli_stmt_num_rows($stmt) == 1){                    
@@ -45,11 +45,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["usuario"] = $usuario;
-                            $_SESSION["tipoUsuario"] = $qry["tipoUsuario"];              
-                            if($qry["tipoUsuario"]="admin"){
-                                header("location:inicio_admin.php");
+                            $_SESSION["tipoUsuario"] = $q["tipoUsuario"];              
+                            if($q["tipoUsuario"]=="admin"){
+                                header("location:welcome.php");
                             }else
-                            header("location: welcome.php");
+                            header("location: inicio_admin.php");
                         } else{
                             $contrasenyaError = "Contraseña incorrecta.";
                         }

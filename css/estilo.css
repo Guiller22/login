@@ -33,3 +33,31 @@ h2 {
 p {
     text-align: center;
 }
+#boton1{
+    background-color: green;
+    border: 1px solid black;
+    text-decoration: none;
+    size: 5cm;
+}
+#boton2{
+    background-color: red;
+    border: 1px solid black;
+    size: 5cm;
+    text-decoration: none;
+
+}
+#boton2 a{
+    text-decoration: none;
+    color: white;
+
+}
+#boton1 a{
+    text-decoration: none;
+    color: white;
+
+}
+#boton3 a{
+    text-decoration: none;
+    color: black;
+
+}
