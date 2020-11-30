@@ -26,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     if(empty($usuarioError) && empty($contrasenyaError)){
-        $sql = "SELECT id, usuario, contrasenya FROM usuarios WHERE usuario = ?";
+        $sql = "SELECT id, usuario, contrasenya ,tipoUsuario FROM usuarios WHERE usuario = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
             mysqli_stmt_bind_param($stmt, "s", $param_username);
@@ -36,16 +36,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(mysqli_stmt_execute($stmt)){
                 mysqli_stmt_store_result($stmt);
                 if(mysqli_stmt_num_rows($stmt) == 1){                    
-                    mysqli_stmt_bind_result($stmt, $id, $usuario, $hashed_password);
+                    mysqli_stmt_bind_result($stmt, $id, $usuario, $hashed_password , $tipoUsuario);
                     if(mysqli_stmt_fetch($stmt)){
                         if(password_verify($contrasenya, $hashed_password)){
                             session_start();
                             
-                            //Almaceno las variables en la sesion
+                            
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["usuario"] = $usuario;                            
-                            
+                            $_SESSION["usuario"] = $usuario;
+                            $_SESSION["tipoUsuario"] = $qry["tipoUsuario"];              
+                            if($qry["tipoUsuario"]="admin"){
+                                header("location:inicio_admin.php");
+                            }else
                             header("location: welcome.php");
                         } else{
                             $contrasenyaError = "Contraseña incorrecta.";

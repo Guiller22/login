@@ -9,7 +9,6 @@ $errorContrasenya = "";
 $errorConfirmacion = "";
  
 if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
     if(empty(trim($_POST["usuario"]))){
         $errorUsuario = "Por favor ingrese un usuario.";
     } else{
@@ -99,7 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <label>Usuario</label>
                 <input type="text" name="usuario" class="form-control" value="<?php echo $usuario; ?>">
                 <span class="help-block"><?php echo $errorUsuario; ?></span>
-            </div>    
+            </div> 
             <div class="form-group <?php echo (!empty($errorContrasenya)) ? 'has-error' : ''; ?>">
                 <label>Contraseña</label>
                 <input type="password" name="contrasenya" class="form-control" value="<?php echo $contrasenya; ?>">
