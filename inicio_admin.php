@@ -19,23 +19,22 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Iconsv=<?php echo time(); ?>">
 </head>
 <style>
-    
+
 </style>
+
 <body>
-    <div class="page-header">
-        <h1>Hola, <b><?php echo htmlspecialchars($_SESSION["usuario"]); ?></b>. Bienvenido admin</h1>
-        <div>
-            <button id="boton1"><a href="reset-password.php">Cambia tu contraseña</a></button>
+    <div>
+        <h1 id="bienvenida">Hola,<?php echo htmlspecialchars($_SESSION["usuario"]); ?></h1>
+        <p id="modo">Modo admin</p>
+        <div id="botones">
+            <button id="boton1"><a href="cambiarContrasenya.php">Cambia tu contraseña</a></button>
             <button id="boton2"><a class="sidenav-close" href="logout.php">Close</a></button>
-            <a href="#!" class="sidenav-close">Close </a>
-
-            <button id="boton3"><a href="tablas.php">Ver Tabla</a></button>
-            
-            
+            <!--<button id="boton3"><a href="tablas.php">Ver Tabla</a></button>!-->
         </div>
-
-
-
+        <h2>Pide cita</h2>
+        <div id="botones">
+            <button id="boton3"><a href="tablas.php">Cita</a></button>
+        </div>
     </div>
 
 

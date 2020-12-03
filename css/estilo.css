@@ -33,31 +33,118 @@ h2 {
 p {
     text-align: center;
 }
-#boton1{
+
+#boton1 {
     background-color: green;
     border: 1px solid black;
     text-decoration: none;
-    size: 5cm;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
 }
-#boton2{
+
+#boton1:hover {
+    background-color: rgb(6, 71, 41) !important;
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+}
+
+#boton2 {
     background-color: red;
     border: 1px solid black;
     size: 5cm;
     text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 
 }
-#boton2 a{
+
+#boton2:hover {
+    background-color: rgb(128, 21, 26) !important;
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+}
+
+#boton2 a {
+    text-decoration: none;
+    color: white;
+
+
+}
+
+#boton3 {
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+#boton3:hover {
+    box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+}
+
+
+#boton1 a {
     text-decoration: none;
     color: white;
 
 }
-#boton1 a{
-    text-decoration: none;
-    color: white;
 
-}
-#boton3 a{
+#boton3 a {
     text-decoration: none;
     color: black;
+    width: 50px;
+}
 
+#bienvenida {
+    font-size: 40px;
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#botones {
+    text-align: center;
+}
+
+#modo {
+    color: rgb(87, 87, 23);
+    text-shadow: 3px solid black;
+    font-weight: bold;
+}
+.tabla{
+    width: 50%;
+    margin: 0 auto;
+  }
+  table.tabla {
+  border: 2px solid #A40808;
+  background-color: #EEE7DB;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.tabla td, table.tabla th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+table.tabla tbody td {
+  font-size: 13px;
+}
+
+table.tabla thead th {
+  font-size: 19px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #A40808;
 }

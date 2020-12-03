@@ -17,12 +17,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty(trim($_POST["usuario"]))){
         $usuarioError = "Por favor ingrese su usuario.";
     } else{
-        $usuario = trim($_POST["usuario"]);
+        $usuario = htmlspecialchars(trim($_POST["usuario"]));
     }
     if(empty(trim($_POST["contrasenya"]))){
         $contrasenyaError = "Por favor ingrese su contraseña.";
     } else{
-        $contrasenya = trim($_POST["contrasenya"]);
+        $contrasenya = htmlspecialchars(trim($_POST["contrasenya"]));
     }
     
     if(empty($usuarioError) && empty($contrasenyaError)){
@@ -32,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_bind_param($stmt, "s", $param_username);
             
             $param_username = $usuario;
-            $qry = mysql_fetch_array($sql);
+            $qry = mysqli_fetch_array($sql);
             if(mysqli_stmt_execute($stmt)){
                 mysqli_stmt_store_result($stmt);
                 if(mysqli_stmt_num_rows($stmt) == 1){                    
@@ -45,11 +45,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["usuario"] = $usuario;
-                            $_SESSION["tipoUsuario"] = $q["tipoUsuario"];              
-                            if($q["tipoUsuario"]=="admin"){
-                                header("location:welcome.php");
+                            $_SESSION["tipoUsuario"] = $tipoUsuario;             
+                            if($tipoUsuario=="admin"){
+                                header("location:inicio_admin.php");
                             }else
-                            header("location: inicio_admin.php");
+                            header("location: welcome.php");
                         } else{
                             $contrasenyaError = "Contraseña incorrecta.";
                         }
@@ -97,7 +97,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Ingresar">
             </div>
-            <p>Si aún no tienes cuenta <a href="register.php"> regístrate</a>.</p>
+            <p>Si aún no tienes cuenta <a href="registrar.php"> regístrate</a>.</p>
         </form>
     </div>    
 </body>
