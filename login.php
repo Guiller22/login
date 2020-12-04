@@ -80,6 +80,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
+<nav>
+    <ul>
+      <a href="index.html"><h1>Hospital San Juan</h1></a>
+      <li><a href="login.php">Iniciar Sesion</a></li>
+      <li><a href="register.php">Registrarte</a></li>
+    </ul>
     <div class="wrapper">
         <h2>Login</h2>
         <p>Inicie sesión</p>

@@ -5,11 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
   <link rel="stylesheet" href="css/estilo.css">
 </head>
 
 <body>
-<p>Introduce el formulario para pedir una cita</p>
+<nav>
+    <ul>
+      <a href="index.html"><h1>Hospital San Juan</h1></a>
+      <li><a href="login.php">Iniciar Sesion</a></li>
+      <li><a href="register.php">Registrarte</a></li>
+    </ul>
+<p class="texto">Introduce el formulario para pedir una cita</p>
   <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
     <div class="form-group">
       <label>Nombre</label>

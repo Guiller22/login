@@ -80,11 +80,14 @@ p {
 
 #boton3 {
     padding: 20px;
-    text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
+
+}
+
+.cita {
+    text-align: center;
 }
 
 #boton3:hover {
@@ -123,28 +126,85 @@ p {
     text-shadow: 3px solid black;
     font-weight: bold;
 }
-.tabla{
+
+.tabla {
     width: 50%;
     margin: 0 auto;
-  }
-  table.tabla {
-  border: 2px solid #A40808;
-  background-color: #EEE7DB;
-  text-align: center;
-  border-collapse: collapse;
 }
-table.tabla td, table.tabla th {
-  border: 1px solid #AAAAAA;
-  padding: 3px 2px;
+
+table.tabla {
+    border:  2px solid black;
+    background-color: #EEE7DB;
+    text-align: center;
+    border-collapse: collapse;
 }
+
+table.tabla td,
+table.tabla th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+}
+
 table.tabla tbody td {
-  font-size: 13px;
+    font-size: 13px;
 }
 
 table.tabla thead th {
-  font-size: 19px;
-  font-weight: bold;
-  color: #FFFFFF;
-  text-align: center;
-  border-left: 2px solid #A40808;
+    font-size: 19px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 2px solid black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+    padding: 10px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 22px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+}
+
+ul h1 {
+    float: left;
+    color: white;
+    padding: 5px;
+}
+
+#centrar img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 50px;
+}
+
+.botones {
+    text-align: center;
+    padding: 20px;
+}
+
+.bienvenido {
+    text-align: center;
+}
+#texto{
+    padding: 20px;
 }

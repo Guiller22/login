@@ -17,15 +17,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
 </head>
+<style>
+    
+</style>
 <body>
-    <div class="page-header">
-        <h1>Hola, <b><?php echo htmlspecialchars($_SESSION["usuario"]); ?></b>. Bienvenid@ a nuestro sitio.</h1>
-        
-    </div>
-    <p>
+<nav>
+    <ul>
+      <a href="index.html"><h1>Hospital San Juan</h1></a>
+      <li><a href="login.php">Iniciar Sesion</a></li>
+      <li><a href="register.php">Registrarte</a></li>
+    </ul>
+        <h1 class="bienvenido">Hola, <b><?php echo htmlspecialchars($_SESSION["usuario"]); ?></b>. Bienvenido</h1>
+        <div class="botones">
         <a href="cambiarContrasenya.php" class="btn btn-warning">Cambia tu contraseña</a>
         <a href="logout.php" class="btn btn-danger">Cierra la sesión</a>
-        <a href="tablas.php">Ver Tabla</a>
+        </div>
+        <div class="cita">
+        <a href="tablas.php"><button id="boton3">Cita</button></a>
+        </div>
+        
+        
     </p>
 
 

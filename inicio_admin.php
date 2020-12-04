@@ -23,6 +23,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 </style>
 
 <body>
+<nav>
+    <ul>
+      <a href="index.html"><h1>Hospital San Juan</h1></a>
+      <li><a href="login.php">Iniciar Sesion</a></li>
+      <li><a href="register.php">Registrarte</a></li>
+    </ul>
     <div>
         <h1 id="bienvenida">Hola,<?php echo htmlspecialchars($_SESSION["usuario"]); ?></h1>
         <p id="modo">Modo admin</p>
@@ -33,7 +39,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         </div>
         <h2>Pide cita</h2>
         <div id="botones">
-            <button id="boton3"><a href="tablas.php">Cita</a></button>
+        
         </div>
     </div>
 
