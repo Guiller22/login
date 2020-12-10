@@ -43,7 +43,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } elseif(strlen(trim($_POST["contrasenya"])) < 6){
         $errorContrasenya = "Debe tener 6 caracteres";
     } else{
-        $contrasenya = trim($_POST["contrasenya"]);
+        $contrasenya = trim(md5($_POST["contrasenya"]));
     }
     
     if(empty(trim($_POST["confirmarContrasenya"]))){

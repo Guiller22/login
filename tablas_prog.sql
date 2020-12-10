@@ -10,7 +10,7 @@ NOMBRE VARCHAR(20),
 EDAD int(3),
 POSITIVO tinyint(1) DEFAULT NULL,
 DNI_MED VARCHAR(9),
-CONSTRAINT FK_CODM FOREIGN KEY (COD_M) REFERENCES
+CONSTRAINT FK_CODM FOREIGN KEY (COD_M) REFER1ENCES
 Medicos(DNI)
 );
 CREATE TABLE Hospital
@@ -60,3 +60,5 @@ INSERT INTO tienda  VALUES (2, 'Barrio comercial', 'Tienda2', 124);
 INSERT INTO tienda  VALUES (3, 'Avenida comercial', 'Tienda3', 125);
 INSERT INTO tienda  VALUES (4, 'Centro comercial', 'Tienda4', 126);
 INSERT INTO tienda  VALUES (5, 'Calle centro', 'Tienda5', 127);
+
+INSERT INTO users values ('1',guille,md5("123456"),'admin');
